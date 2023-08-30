@@ -133,24 +133,6 @@ mdb.models['tower'].FrequencyStep(name='Step-2', previous='Step-1',
     numEigen=20)
 session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-2')
 
-##interaction
-'''r1=a.instances['casing-1'].referencePoints
-refPoints1=(r1[1], )
-region1=regionToolset.Region(referencePoints=refPoints1)
-v = a.instances['towerbody-1'].vertices
-verts = v.findAt(((pointlist[-1][0],pointlist[-1][1],0), ))
-region2=regionToolset.Region(vertices=verts)
-mdb.models['tower'].Tie(name='Constraint-1', master=region2, slave=region1, 
-        positionToleranceMethod=COMPUTED, adjust=ON, tieRotations=ON, 
-        thickness=ON)
-
-r2=a.instances['wheel-1'].referencePoints
-refPoints1=(r2[1], )
-region1=regionToolset.Region(referencePoints=refPoints1)
-mdb.models['tower'].Tie(name='Constraint-2', master=region2, slave=region1, 
-        positionToleranceMethod=COMPUTED, adjust=ON, tieRotations=ON, 
-        thickness=ON)
-'''
 ##load
 v1 = a.instances['towerbody-1'].vertices
 verts1 = v1.findAt(((pointlist[0][0],pointlist[0][1],0),))
