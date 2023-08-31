@@ -157,7 +157,7 @@ mdb.models['tower'].Gravity(name='gravity', createStepName='Step-1', comp2=-9800
         distributionType=UNIFORM, field='')
 
 ##mesh
-p.seedPart(size=500, deviationFactor=0.1, minSizeFactor=0.1)
+p.seedPart(size=10, deviationFactor=0.1, minSizeFactor=0.1)
 elemType1 = mesh.ElemType(elemCode=B31, elemLibrary=STANDARD)
 e = p.edges
 for i in range(0,len(pointlist)-1):
